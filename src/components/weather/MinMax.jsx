@@ -3,7 +3,7 @@ import { ArrowDown, ArrowUp } from "@/Icons/Icons";
 const MinMax = ({ min, max, city, country }) => {
   return (
     <div className="w-full md:w-1/2 mt-12 mb-8 flex flex-col justify-center items-center gap-y-5">
-      <h2 className="text-2xl md:text-3xl font-serif font-bold text-center">
+      <h2 className="text-2xl md:text-3xl font-bold text-center">
         {city}, {country}
       </h2>
       <div className="flex md:gap-[100px] gap-10 justify-center">

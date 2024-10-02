@@ -3,14 +3,6 @@ import Presenting from "@/components/layout/presenting";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 
-// import { Analytics } from "@vercel/analytics/react"
-
-export const metadata = {
-  metadataBase: new URL('https://tu-sitio-web.com/'),
-  title: "App-Weather",
-  description: "Descripción breve de tu aplicación",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
