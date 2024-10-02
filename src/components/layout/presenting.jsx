@@ -8,9 +8,9 @@ const Presenting = () => {
         <img
           src="weatherIcon.png"
           alt="Weather Icon"
-          className="w-16 h-16 md:w-24 md:h-24"
+          className="w-12 h-12 md:w-20 md:h-20"
         />
-        <h1 className="text-4xl md:text-5xl font-bold">Weather App</h1>
+        <h1 className="text-4xl md:text-4xl font-bold">Weather App - Aplicacion del clima</h1>
       </div>
       
     </div>
