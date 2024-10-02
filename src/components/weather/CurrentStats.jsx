@@ -1,69 +1,33 @@
 import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from "@/Icons/Icons";
 
-const CurrentStats = ({ current, time }) => {;
+const CurrentStats = ({ current, time }) => {
+  const stats = [
+    { label: "Humedad", value: `${current.humidity}%`, Icon: DropIcon },
+    { label: "Sens. Térm.", value: `${current.feelslike}°`, Icon: ThermometerIcon },
+    { label: "Nubosidad", value: `${current.cloud}%`, Icon: Cloud },
+    { label: "Amanecer", value: time.sunrise, Icon: SunriseIcon },
+    { label: "Anochecer", value: time.sunset, Icon: SunsetIcon },
+    { label: "Viento", value: `${current.wind} Km/h`, Icon: WindIcon },
+  ];
+
   return (
-    <div className="w-full flex justify-center ">
-      <div className="md:w-full w-full  ">
-        <div className="grid md:grid-cols-6 grid-cols-2 gap-y-10 py-2">
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1">
-            <span className="mt-[-8px]">
-              <DropIcon />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Humedad</span>
-              <span className="text-base">{current.humidity}%</span>
+    <div className="w-full flex justify-center">
+      <div className="w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-6 py-4">
+          {stats.map(({ label, value, Icon }) => (
+            <div
+              key={label}
+              className="flex justify-center items-center gap-3 bg-cyan-700 rounded-xl m-1 p-2"
+            >
+              <span className="mt-[-8px] w-8 h-8">
+                <Icon />
+              </span>
+              <div className="flex flex-col text-center">
+                <span className="font-sans text-sm opacity-95">{label}</span>
+                <span className="text-base font-semibold">{value}</span>
+              </div>
             </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1">
-            <span className="mt-[-8px]">
-              <ThermometerIcon />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Sens. Térm.</span>
-              <span className="text-base">{current.feelslike}°</span>
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1">
-            <span className="mt-[-8px]">
-              <Cloud />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Nubosidad</span>
-              <span className="text-base">{current.cloud}%</span>
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1 p-1">
-            <span className="mt-[-8px]">
-              <SunriseIcon />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Amanecer</span>
-              <span className="text-base">{time.sunrise}</span>
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1">
-            <span className="mt-[-8px]">
-              <SunsetIcon />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Anochecer</span>
-              <span className="text-base">{time.sunset}</span>
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 bg-cyan-700 rounded-xl m-1">
-            <span className="mt-[-8px]">
-              <WindIcon />
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans opacity-95">Viento</span>
-              <span className="text-base">{current.wind} Km/h</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
