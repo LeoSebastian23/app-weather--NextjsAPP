@@ -1,4 +1,4 @@
-import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from "@/Icons/Icons";
+import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from '../../Icons/Icons';
 const CurrentStats = ({ current, time }) => {
   const stats = [
     { label: "Humedad", value: `${current.humidity}%`, Icon: DropIcon },
