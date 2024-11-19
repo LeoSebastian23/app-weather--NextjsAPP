@@ -1,4 +1,4 @@
-import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from "@/Icons/Icons";
+import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from "@/Icons/Icons.jsx";
 
 const CurrentStats = ({ current, time }) => {
   const stats = [
