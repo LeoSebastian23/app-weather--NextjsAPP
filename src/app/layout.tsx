@@ -1,7 +1,7 @@
 import "./globals.css";
 import Presenting from "@/components/layout/presenting";
-import Nav from "@/components/layout/Nav";
-import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/nav";
+import Footer from "@/components/layout/footer";
 
 export default function RootLayout({ children }) {
   return (

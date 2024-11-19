@@ -10,7 +10,7 @@ const CurrentStats = dynamic(() => import("@/components/weather/CurrentStats"));
 const Future = dynamic(() => import("@/components/weather/Future"));
 const ByHours = dynamic(() => import("@/components/weather/ByHours"));
 const MainWeather = dynamic(() => import("@/components/weather/MainWeather"));
-const Minmax = dynamic(() => import("@/components/weather/Minmax"));
+const Minmax = dynamic(() => import("@/components/weather/MinMax"));
 const ChartStats = dynamic(() => import("@/components/weather/ChartStats"));
 
 const ResultPage = async ({ params }) => {

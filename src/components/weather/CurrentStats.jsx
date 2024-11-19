@@ -1,5 +1,4 @@
 import { Cloud, DropIcon, SunriseIcon, SunsetIcon, ThermometerIcon, WindIcon } from "@/Icons/Icons";
-
 const CurrentStats = ({ current, time }) => {
   const stats = [
     { label: "Humedad", value: `${current.humidity}%`, Icon: DropIcon },
@@ -20,7 +19,7 @@ const CurrentStats = ({ current, time }) => {
               className="flex justify-center items-center gap-3 bg-cyan-700 rounded-xl m-1 p-2"
             >
               <span className="mt-[-8px] w-8 h-8">
-                <Icon />
+                <Icon></Icon>
               </span>
               <div className="flex flex-col text-center">
                 <span className="font-sans text-sm opacity-95">{label}</span>
