@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
-import { SearchIcon } from '../../Icons/Icons';
+import { SearchIcon } from '@/icons/icons';
 import { searchCity } from "@/services/weather";
 
 const Search = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(""); 
   const [city, setCity] = useState([]);
   
   useEffect(() => {
