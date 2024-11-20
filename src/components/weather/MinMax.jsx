@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp } from '@/icons/icons';
+import { ArrowDown, ArrowUp } from '@/icons/index';
 
 const MinMax = ({ min, max, city, country }) => {
   return (

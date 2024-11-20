@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
-import { SearchIcon } from '@/icons/icons';
+import { SearchIcon } from '@/icons/index';
 import { searchCity } from "@/services/weather";
 
 const Search = () => {
